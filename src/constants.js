@@ -24,4 +24,4 @@ export const RESERVATION_TITLE = {
   [ReservationType.OTHERS]: "Reserved By Others",
 };
 
-export const TIMESLOT_SIZE = 100;
+export const TIME_SLOT_SIZE = 100;

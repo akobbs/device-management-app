@@ -12,7 +12,7 @@ import {
 } from "../contexts/ReservationsContext";
 import { DeviceInfo } from "../components/DeviceInfo";
 import { Timeline } from "../components/Timeline";
-import { HOUR_LIST, ReservationType, TIMESLOT_SIZE } from "../constants";
+import { HOUR_LIST, ReservationType, TIME_SLOT_SIZE } from "../constants";
 import { DateSelector } from "../components/DateSelector";
 import { CreateReservationDialog } from "../dialogs/CreateReservationDialog";
 import { ReservationsPageFooter } from "./ReservationsPageFooter";
@@ -46,12 +46,12 @@ const styles = {
   timelineHeader: {
     display: "flex",
     flexDirection: "row",
-    paddingLeft: TIMESLOT_SIZE - HEADER_ITEM_WIDTH / 2,
+    paddingLeft: TIME_SLOT_SIZE - HEADER_ITEM_WIDTH / 2,
     height: HEADER_HEIGHT,
     alignItems: "center",
   },
   timelineHeaderItem: {
-    flexBasis: TIMESLOT_SIZE,
+    flexBasis: TIME_SLOT_SIZE,
     flexGrow: 0,
     flexShrink: 0,
   },
@@ -153,8 +153,8 @@ export function ReservationsPage() {
     setCreateDialogOpen(false);
   }
 
-  function getIsTimeslotAvailable() {
-    // TODO: Validate that this specific timeslot is available
+  function getIsTimeSlotAvailable() {
+    // TODO: Validate that this specific time slot is available
     return true;
   }
 
@@ -173,9 +173,9 @@ export function ReservationsPage() {
       })
       .unix();
 
-    const isTimeslotAvailable = getIsTimeslotAvailable();
-    if (isTimeslotAvailable) {
-      // TODO: Add ability to add timeslot for multiple devices at the same time
+    const isTimeSlotAvailable = getIsTimeSlotAvailable();
+    if (isTimeSlotAvailable) {
+      // TODO: Add ability to add time slot for multiple devices at the same time
       addReservations(dispatch, {
         from: fromTimestamp,
         to: toTimestamp,

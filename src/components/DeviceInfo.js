@@ -1,11 +1,11 @@
-import { TIMESLOT_SIZE } from "../constants";
+import { TIME_SLOT_SIZE } from "../constants";
 
 const styles = {
   container: {
     flexBasis: 200,
     flexGrow: 0,
     flexShrink: 0,
-    height: TIMESLOT_SIZE,
+    height: TIME_SLOT_SIZE,
     border: "1px solid grey",
     borderWidth: "0px 1px 1px 1px",
     padding: 12,

@@ -1,6 +1,21 @@
 # Getting Started with Create React App
 
+## Reservations Page
+
+![Alt text](./assets/reservations-list.png?raw=true)
+
+## Create Reservation Page
+
+![Alt text](./assets/create-reservation.png?raw=true)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## To Do List
+
+- Add tests
+- Add ability to create reservation for multiple devices at the same time
+- Validate whether the given time slot is available
+- Replace inline styles with CSS-in-JS
 
 ## Available Scripts
 

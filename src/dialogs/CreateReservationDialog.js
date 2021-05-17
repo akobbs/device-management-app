@@ -48,7 +48,7 @@ export function CreateReservationDialog({ open, onClose, onCreate }) {
     return checkedIds.some((id) => id === deviceId);
   }
 
-  function getIsValidTimeslot() {
+  function getIsValidTimeSlot() {
     if (fromDate.hoursValue > toDate.hoursValue) {
       return false;
     }
@@ -60,10 +60,10 @@ export function CreateReservationDialog({ open, onClose, onCreate }) {
     return true;
   }
 
-  const isValidTimeslot = getIsValidTimeslot();
+  const isValidTimeSlot = getIsValidTimeSlot();
   const isMultipleDevicesChecked = checkedIds.length > 1;
   const isCreateButtonDisabled =
-    checkedIds.length === 0 || !isValidTimeslot || isMultipleDevicesChecked;
+    checkedIds.length === 0 || !isValidTimeSlot || isMultipleDevicesChecked;
 
   const onDeviceCheck = (deviceId) => {
     const isChecked = getIsChecked(deviceId);
@@ -89,7 +89,7 @@ export function CreateReservationDialog({ open, onClose, onCreate }) {
       <DialogTitle id="form-dialog-title">Create Reservation</DialogTitle>
       <DialogContent>
         <DialogContentText>
-          Please select devices and suitable timeslot
+          Please select devices and suitable time slot
         </DialogContentText>
 
         <DeviceList checkedIds={checkedIds} onDeviceCheck={onDeviceCheck} />
@@ -103,7 +103,7 @@ export function CreateReservationDialog({ open, onClose, onCreate }) {
           <TimePicker label="To" value={toDate} onChange={setToDate} />
         </div>
 
-        {!isValidTimeslot && (
+        {!isValidTimeSlot && (
           <ErrorMessage message='"To Date" should be after "From Date"' />
         )}
       </DialogContent>

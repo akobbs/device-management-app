@@ -1,5 +1,5 @@
 import moment from "moment";
-import { HOUR_LIST, RESERVATION_COLOR, TIMESLOT_SIZE } from "../constants";
+import { HOUR_LIST, RESERVATION_COLOR, TIME_SLOT_SIZE } from "../constants";
 
 const styles = {
   container: {
@@ -7,9 +7,9 @@ const styles = {
     flexDirection: "row",
     position: "relative",
   },
-  timeslot: {
-    height: TIMESLOT_SIZE,
-    flexBasis: TIMESLOT_SIZE,
+  timeSlot: {
+    height: TIME_SLOT_SIZE,
+    flexBasis: TIME_SLOT_SIZE,
     flexGrow: 0,
     flexShrink: 0,
     borderRight: "1px solid grey",
@@ -21,7 +21,7 @@ const calculateX = (date) => {
   const hours = date.hour();
   const minutes = date.minute();
 
-  return (hours + Math.floor(minutes / 30) * 0.5 + 1) * TIMESLOT_SIZE;
+  return (hours + Math.floor(minutes / 30) * 0.5 + 1) * TIME_SLOT_SIZE;
 };
 
 const getReservationStyle = ({ from, to, type }) => {
@@ -47,7 +47,7 @@ export function Timeline({ device, reservations }) {
   return (
     <div style={styles.container}>
       {HOUR_LIST.map((date) => (
-        <div key={date} style={styles.timeslot} />
+        <div key={date} style={styles.timeSlot} />
       ))}
 
       {reservations.map((reservation, index) => {
