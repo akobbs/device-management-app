@@ -14,6 +14,7 @@
 - Add ability to create reservation for multiple devices at the same time
 - Validate whether the given time slot is available
 - Replace inline styles with CSS-in-JS
+- Replace `moment` with `date-fns`
 
 ## How to run the app?
 
