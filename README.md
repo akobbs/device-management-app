@@ -6,7 +6,7 @@
 
 ## Create Reservation Page
 
-![Alt text](./assets/create-reservation.png?raw=true)
+![Alt text](./assets/create-reservation-dialog.png?raw=true)
 
 ## To Do List
 
